@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Perfect Building Contractor Ltd - Invoice</title>
+<link rel="stylesheet" href="invoice.css">
+</head>
+<body>
+<div class="home-link no-print"><a href="index.html">← Home</a></div>
+
+<div class="invoice-page">
+<header class="letterhead-header"><img src="header.png" alt="Perfect Building Contractor Ltd"></header>
+
+<main class="invoice-content">
+
+  <div class="title-row">
+    <div>
+      <h1>INVOICE</h1>
+      <div class="ref"><b>Invoice No:</b> <input id="invoiceNo" aria-label="Invoice number"></div>
+    </div>
+    <div class="date-box" id="invoiceDateBox">
+      <label>Invoice Date<input id="invoiceDate" type="date"></label>
+    </div>
+  </div>
+
+  <div class="details-grid">
+    <section class="info-box" id="billToBox">
+      <h3>BILL TO</h3>
+      <input id="clientName" placeholder="Client Name">
+      <input id="clientAddress" placeholder="Client Address">
+      <input id="clientContact" placeholder="Phone / Email">
+    </section>
+
+    <section class="info-box" id="projectBox">
+      <h3>PROJECT DETAILS</h3>
+      <input id="projectAddress" placeholder="Project Address">
+      <input id="projectName" placeholder="Project / Job Name">
+    </section>
+  </div>
+
+  <table class="items-table">
+    <thead>
+      <tr>
+        <th class="num">NO.</th>
+        <th>DESCRIPTION OF WORK / ITEM</th>
+        
+        <th class="remove no-print"></th>
+      </tr>
+    </thead>
+    <tbody id="itemsBody"></tbody>
+  </table>
+
+  <div class="toolbar no-print"><button class="add-btn" id="addItemBtn" type="button">+ Add Item</button></div>
+
+  <section class="payment-card">
+    <div class="payment-left">
+      <h3>PAYMENT SUMMARY</h3>
+
+      <div class="summary-row">
+        <span>Total Invoice Amount</span>
+        <div class="input-money">
+          <span>£</span>
+          <input id="invoiceTotal" type="number" min="0" step="0.01" placeholder="Total amount">
+        </div>
+      </div>
+
+      <div class="summary-row">
+        <span>Due / Paid Now</span>
+        <div class="input-money">
+          <span>£</span>
+          <input id="paidNow" type="number" min="0" step="0.01" placeholder="Amount paid">
+        </div>
+      </div>
+
+      <div class="remaining">
+        <span>REMAINING BALANCE</span>
+        <strong id="remaining">£0.00</strong>
+      </div>
+    </div>
+
+    <div class="bank-box">
+      <h3>BANK DETAILS</h3>
+      <div><span>Account Name</span><b>Perfect Building Contractor Ltd</b></div>
+      <div><span>Sort Code</span><b>23-08-01</b></div>
+      <div><span>Account Number</span><b>27126829</b></div>
+      <p>Please use your invoice number as the payment reference.</p>
+    </div>
+  </section>
+
+  <section class="note-section" id="noteSection">
+    <h3>NOTE</h3>
+    <textarea id="note" placeholder="Add a note for the client..."></textarea>
+  </section>
+
+  <div class="status" id="status">Enter invoice items and payment received.</div>
+
+  <div class="signature-row">
+    <div>
+      <b>Client Acknowledgement</b>
+      <div class="signature-line"></div>
+      <small>Name / Signature / Date</small>
+    </div>
+    <div class="prepared"><b>Prepared by</b><br>Perfect Building Contractor Ltd</div>
+  </div>
+
+  <div class="actions no-print">
+    <button type="button" id="printBtn">Print / Save PDF</button>
+    <button type="button" id="saveBtn">Save Invoice</button>
+    <button type="button" class="secondary" id="newBtn">New Invoice</button>
+  </div>
+</main>
+
+<footer class="letterhead-footer"><img src="footer.png" alt=""></footer>
+</div>
+
+<script src="invoice.js?v=20260817-description-final"></script>
+</body>
+</html>
